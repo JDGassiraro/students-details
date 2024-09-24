@@ -1,7 +1,20 @@
+// .students-record{
+//     padding: 1%;
+// }
+
+// .record-table{
+//     border: 1px solid whitesmoke;
+// }
+
 .students-record{
     padding: 1%;
-}
+    margin:4%;
 
-.record-table{
-    border: 1px solid whitesmoke;
+    &__record-table{
+        border: 1px solid whitesmoke;
+    }
+
+    &.sidebarExpanded{
+        margin-left:18%;
+    }
 }

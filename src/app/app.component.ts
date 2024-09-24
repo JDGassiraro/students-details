@@ -3,14 +3,15 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import {FormsModule, FormControl, FormBuilder, ReactiveFormsModule} from '@angular/forms';
-import {NgbHighlight} from '@ng-bootstrap/ng-bootstrap'
+import {NgbHighlight} from '@ng-bootstrap/ng-bootstrap';
+import {SideBarComponent} from './side-bar/side-bar.component';
 
 
 
 @Component({
     selector: 'students-details-root',
     standalone: true,
-    imports: [RouterOutlet, CommonModule, FormsModule, ReactiveFormsModule, NgbHighlight],
+    imports: [RouterOutlet, CommonModule, FormsModule, ReactiveFormsModule, NgbHighlight, SideBarComponent],
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss'
 })
@@ -120,11 +121,13 @@ export class AppComponent {
         
        
     ];
+
+    sidebarExpanded: boolean = true;
     constructor(
         private fb: FormBuilder
 
     ) {
         this.filter= this.fb.control ("",{nonNullable : true});
-    }
-}
+    };
 
+}
